@@ -1,0 +1,30 @@
+# Android/Gradle generated files
+.gradle/
+build/
+**/build/
+
+# Local machine configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# APK/AAB generated files
+*.apk
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python virtual environment
+pdf-server/venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Other Python environments
+.venv/
+venv/

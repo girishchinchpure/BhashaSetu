@@ -1,0 +1,65 @@
+{
+  "translations": [
+    {"hindi": "बच्चों ध्यान दो", "ho": "Bichiing diyan do", "context": "classroom_instruction"},
+    {"hindi": "शाबाश!", "ho": "Shabash!", "context": "praise"},
+    {"hindi": "यह क्या है?", "ho": "Eta ka hua?", "context": "question"},
+    {"hindi": "बैठ जाओ", "ho": "Baito koraa", "context": "classroom_instruction"},
+    {"hindi": "खड़े हो जाओ", "ho": "Khado hoa koraa", "context": "classroom_instruction"},
+    {"hindi": "एक", "ho": "Mit", "context": "number"},
+    {"hindi": "दो", "ho": "Bar", "context": "number"},
+    {"hindi": "तीन", "ho": "Api", "context": "number"},
+    {"hindi": "चार", "ho": "Upun", "context": "number"},
+    {"hindi": "पाँच", "ho": "Morehe", "context": "number"},
+    {"hindi": "यह पेड़ है", "ho": "Eta daru cha", "context": "vocabulary"},
+    {"hindi": "यह पानी है", "ho": "Eta daa cha", "context": "vocabulary"},
+    {"hindi": "आज मौसम अच्छा है", "ho": "Aaj saagun aling cha", "context": "general"},
+    {"hindi": "अपनी किताब खोलो", "ho": "Aam kitab khole koraa", "context": "classroom_instruction"},
+    {"hindi": "मुझे देखो", "ho": "Aem mena koraa", "context": "classroom_instruction"},
+    {"hindi": "आज हम पढ़ाई करेंगे", "ho": "Aaj aam padhang koriaa", "context": "general"},
+    {"hindi": "बच्चों, यह देखो — यह एक पेड़ है", "ho": "Bichiing, eta mena — eta mit daru cha", "context": "classroom_instruction"},
+    {"hindi": "एक दो तीन", "ho": "Mit bar aapi", "context": "number"},
+    {"hindi": "शाबाश बच्चे!", "ho": "Shabash bichiing!", "context": "praise"},
+    {"hindi": "यह हाथी बड़ा है", "ho": "Eta hati bada cha", "context": "vocabulary"}
+  ],
+  "nipun_outcomes": [
+    {
+      "code": "FLN-G1-L1",
+      "title_hi": "अक्षर पहचान",
+      "grade": 1,
+      "subject": "literacy",
+      "objective_hi": "बच्चे 'अ' की आवाज़ पहचान सकेंगे",
+      "activities_hi": [
+        "बच्चों, आज हम 'अ' की आवाज़ सीखेंगे",
+        "देखो, मैं बोर्ड पर 'अ' लिखती हूँ",
+        "अब तुम 'अ' से शुरू होने वाले शब्द बताओ",
+        "शाबाश! अब हम देखेंगे कि तुमने क्या सीखा"
+      ]
+    },
+    {
+      "code": "FLN-G1-N1",
+      "title_hi": "1-10 तक गिनती",
+      "grade": 1,
+      "subject": "numeracy",
+      "objective_hi": "बच्चे 1 से 10 तक गिनना सीखेंगे",
+      "activities_hi": [
+        "आज हम एक से दस तक गिनेंगे",
+        "देखो, यह एक का अंक है",
+        "अपनी उंगलियों पर गिनो",
+        "बहुत अच्छे! तुमने गिनती सीख ली"
+      ]
+    },
+    {
+      "code": "FLN-G2-L1",
+      "title_hi": "सरल शब्द पढ़ना",
+      "grade": 2,
+      "subject": "literacy",
+      "objective_hi": "बच्चे सरल शब्द पढ़ सकेंगे",
+      "activities_hi": [
+        "आज हम सरल शब्द पढ़ेंगे",
+        "देखो, यह शब्द कैसे बनता है",
+        "अब तुम इस शब्द को पढ़ो",
+        "शाबाश! तुमने शब्द पढ़ लिया"
+      ]
+    }
+  ]
+}

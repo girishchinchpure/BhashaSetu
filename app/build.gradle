@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.bhashasetu.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.bhashasetu.app"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        jniLibs {
+            /*
+             * sherpa-onnx and ONNX Runtime both contain
+             * libonnxruntime.so for ARM.
+             *
+             * Keep one copy for the phone ABIs.
+             */
+            pickFirsts += [
+                    "lib/arm64-v8a/libonnxruntime.so",
+                    "lib/armeabi-v7a/libonnxruntime.so"
+            ]
+
+            /*
+             * We are NOT shipping x86/x86_64 in BhashaSetu.
+             */
+            excludes += [
+                    "lib/x86/libonnxruntime.so",
+                    "lib/x86_64/libonnxruntime.so"
+            ]
+
+            useLegacyPackaging true
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+
+    // Existing ONNX Runtime used by NMTEngine
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.27.0'
+
+    // Offline IndicConformer / sherpa-onnx
+    implementation files('libs/sherpa-onnx-1.13.4.aar')
+
+    /*
+     * KEEP any other dependencies from your original
+     * working BhashaSetu build.gradle here.
+     */
+}

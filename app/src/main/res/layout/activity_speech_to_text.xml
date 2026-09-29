@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="🎤 SPEECH TO TEXT" android:textStyle="bold" android:textSize="18sp" />
+
+    <com.google.android.material.card.MaterialCardView style="@style/FeatureCard"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HINDI INPUT" android:textStyle="bold" android:textSize="12sp" />
+            <TextView android:id="@+id/hindiInputText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:text="—" android:textSize="18sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView style="@style/FeatureCard"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HO TRANSLATION" android:textStyle="bold" android:textSize="12sp" />
+            <TextView android:id="@+id/hoOutputText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:text="—" android:textSize="18sp" android:textColor="@color/primary_variant" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+                <Button android:id="@+id/btnPlayAudio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔊 Play" />
+                <Button android:id="@+id/btnCorrect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✅" />
+                <Button android:id="@+id/btnIncorrect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="❌" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView android:id="@+id/metaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" android:textSize="12sp" android:text="⏱️ Latency: —  |  💾 Cache: —" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center">
+        <Button android:id="@+id/btnMic" style="@style/MicButton" android:text="🎙️\nTAP TO SPEAK" android:textAlignment="center" />
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📝 Recent Translations:" android:textStyle="bold" />
+    <ListView android:id="@+id/recentList" android:layout_width="match_parent" android:layout_height="150dp" />
+
+</LinearLayout>

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/surface"
+        android:elevation="2dp"
+        app:navigationIcon="@null"
+        app:title="">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="180dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="BhashaSetu"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bhashasetu_logo" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- Welcome Heading -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="अपनी भाषा में सीखें,"
+                android:textColor="@color/deep_blue"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/manrope"
+                android:lineSpacingExtra="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="बेहतर भविष्य की ओर बढ़ें!"
+                android:textColor="@color/deep_blue"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/manrope"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginBottom="18dp" />
+
+
+            <!-- Language Selector Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:strokeColor="#E5E7EB"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Language Selected"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/manrope"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/languageSpinner"
+                        android:layout_width="145dp"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@color/deep_blue" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Translation Features -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Learn &amp; Translate"
+                android:textColor="@color/deep_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/manrope"
+                android:layout_marginBottom="10dp" />
+
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Voice Translate - UNDER DEVELOPMENT -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSpeechToText"
+                    android:layout_width="0dp"
+                    android:layout_height="155dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:enabled="false"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:alpha="0.55"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="#D1D5DB"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="🎙"
+                            android:textSize="27sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Voice Translate"
+                            android:textColor="@color/deep_blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="4dp"
+                            android:background="@drawable/home_status_chip"
+                            android:text="UNDER DEVELOPMENT"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope"
+                            android:letterSpacing="0.04" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- Text Translate -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTextToSpeech"
+                    android:layout_width="0dp"
+                    android:layout_height="155dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="7dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#E5E7EB"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="📝"
+                            android:textSize="27sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Text Translate"
+                            android:textColor="@color/deep_blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="Type → Translate"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/manrope" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp">
+
+                <!-- Live Classroom -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardVoiceToVoice"
+                    android:layout_width="0dp"
+                    android:layout_height="155dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="7dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#E5E7EB"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="⇄"
+                            android:textColor="@color/warm_orange"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Live Classroom"
+                            android:textColor="@color/deep_blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="Real-time voice ⇄ voice"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/manrope" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- Lesson Plan -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLessonPlan"
+                    android:layout_width="0dp"
+                    android:layout_height="155dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="7dp"
+                    android:enabled="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:alpha="1.0"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="#E5E7EB"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:gravity="center"
+                            android:text="📋"
+                            android:textSize="27sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Lesson Plan"
+                            android:textColor="@color/deep_blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="4dp"
+                            android:background="@drawable/home_status_chip"
+                            android:text="AI GENERATED"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope"
+                            android:letterSpacing="0.04" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <!-- Bilingual Materials -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/deep_blue"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="📚"
+                        android:textSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bilingual Materials"
+                            android:textColor="@color/on_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/manrope" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Learn together in two languages"
+                            android:textColor="#DCE8F2"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/manrope" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="@color/on_primary"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Generation Status -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Worksheets &amp; Flashcards • AI Generated"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                android:fontFamily="@font/manrope" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Bottom Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/surface"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/statusBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Today: 0 translations  •  Offline"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:fontFamily="@font/manrope" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="●"
+            android:textColor="@color/leaf_green"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

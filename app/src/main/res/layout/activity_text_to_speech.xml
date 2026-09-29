@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="📝 TEXT TO SPEECH" android:textStyle="bold" android:textSize="18sp" />
+
+    <EditText android:id="@+id/hindiInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:hint="आज हम पढ़ाई करेंगे" android:background="@android:drawable/edit_text"
+        android:padding="10dp" android:minLines="2" />
+
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <LinearLayout android:id="@+id/quickPhraseContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <Button android:id="@+id/btnTranslateSpeak" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:text="🔄 TRANSLATE &amp; SPEAK" android:backgroundTint="@color/primary" android:textColor="@color/on_primary" />
+
+    <com.google.android.material.card.MaterialCardView style="@style/FeatureCard"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HO TRANSLATION" android:textStyle="bold" android:textSize="12sp" />
+            <TextView android:id="@+id/hoOutputText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:text="—" android:textSize="18sp" android:textColor="@color/primary_variant" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+                <Button android:id="@+id/btnPlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▶ Play" />
+                <Button android:id="@+id/btnLoop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔁 Loop" />
+                <Button android:id="@+id/btnSlow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🐢 Slow" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
+        <Button android:id="@+id/btnCorrect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✅ Correct" />
+        <Button android:id="@+id/btnIncorrect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="❌ Wrong" />
+    </LinearLayout>
+
+</LinearLayout>

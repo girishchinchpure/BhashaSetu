@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WORKSHEET &amp; FLASHCARD GENERATION"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Create bilingual Santhali learning material from the topics taught in class."
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Curriculum Source"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerCurriculum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Class"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Subject"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Topics Taught"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/topicContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <Button
+            android:id="@+id/btnAddTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="+ Add Topic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Difficulty Level"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Generate"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/checkboxWorksheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Worksheet"/>
+
+        <CheckBox
+            android:id="@+id/checkboxFlashcards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flashcards"/>
+
+        <Button
+            android:id="@+id/btnGenerateMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Generate Material"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/on_primary"/>
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Generated material will appear here."
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

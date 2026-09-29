@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- BhashaSetu Brand Colors -->
+    <color name="deep_blue">#0D3B66</color>
+    <color name="leaf_green">#2E7D32</color>
+    <color name="warm_orange">#F79C1A</color>
+    <color name="slate_gray">#6B7280</color>
+
+    <!-- UI Colors -->
+    <color name="background">#F8FAFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#0D3B66</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Existing compatibility colors -->
+    <color name="primary">#0D3B66</color>
+    <color name="primary_variant">#082A4A</color>
+    <color name="secondary">#F79C1A</color>
+    <color name="secondary_variant">#D97706</color>
+
+    <!-- Translation confidence colors -->
+    <color name="confidence_high">#43A047</color>
+    <color name="confidence_medium">#FB8C00</color>
+    <color name="confidence_low">#E53935</color>
+
+</resources>

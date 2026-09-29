@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Topic -->
+    <TextView
+        android:id="@+id/topicLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Topic taught"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
+    <Spinner
+        android:id="@+id/topicInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Date taught"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Year -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textSize="11sp" />
+
+            <NumberPicker
+                android:id="@+id/yearPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Year" />
+
+        </LinearLayout>
+
+        <!-- Month -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Month"
+                android:textSize="11sp" />
+
+            <NumberPicker
+                android:id="@+id/monthPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Month" />
+
+        </LinearLayout>
+
+        <!-- Day -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Day"
+                android:textSize="11sp" />
+
+            <NumberPicker
+                android:id="@+id/dayPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Day" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Frozen state / delete -->
+    <Button
+        android:id="@+id/deleteTopicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="4dp"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:visibility="gone" />
+
+</LinearLayout>

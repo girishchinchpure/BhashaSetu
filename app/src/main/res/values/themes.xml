@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="Theme.BhashaSetu"
+        parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/deep_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorSecondary">@color/warm_orange</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+
+        <!-- Typography -->
+        <item name="android:fontFamily">@font/manrope</item>
+
+        <!-- Application Background -->
+        <item name="android:windowBackground">@color/background</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/deep_blue</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+    </style>
+
+
+    <!-- Feature Cards -->
+
+    <style name="FeatureCard"
+        parent="Widget.MaterialComponents.CardView">
+
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+
+        <item name="strokeColor">#E5E7EB</item>
+        <item name="strokeWidth">1dp</item>
+
+    </style>
+
+
+    <!-- Microphone Button -->
+
+    <style name="MicButton">
+
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">130dp</item>
+
+        <item name="backgroundTint">@color/deep_blue</item>
+        <item name="android:textColor">@color/on_primary</item>
+
+    </style>
+
+</resources>
